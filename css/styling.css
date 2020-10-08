@@ -1,0 +1,80 @@
+.center{
+    padding: 160px 0;
+}
+
+/* Styling code for the quiz page
+Akshay. "How to Create Simple Quiz using PHP and MySQL". technopoints.co.in. 
+https://technopoints.co.in/create-simple-quiz-using-php-mysql/ (accessed Oct. 3 & 4, 2020).
+*/
+body.quiz{
+   background: beige;
+   background-size:100%;
+   background-repeat: no-repeat;
+   position: relative;
+   background-attachment: fixed;
+}
+
+/* quiz buttons*/
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #9042f5;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 30px;
+    padding: 25px;
+    width: 300px;
+    margin: 5px;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+
+.button span:after {
+    position: absolute;
+    opacity:0;
+    top: 0;
+    right: -20px;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.title {
+    background-color: darkturquoise;
+    font-size: 30px;
+    padding: 15px;
+}
+
+.button3 {
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px, 2px;
+    cursor: pointer;
+}
+.button3 {
+    background-color: white;
+    color:black;
+    border: 2px solid #0e37bb;
+}
+
+.button3:hover {
+    background-color: #0e37bb;
+    color: Black;
+}
+
