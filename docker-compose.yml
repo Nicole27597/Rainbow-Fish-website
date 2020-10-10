@@ -1,0 +1,24 @@
+version: '3.3'
+
+services:
+
+        #  db:
+        #image: mariadb:latest
+        #restart: always
+        #environment: 
+        # MYSQL_ROOT_PASSWORD: myDatabase
+        #   MYSQL_DATABASE: quizdb
+
+    php:    
+        image: php:7.4-fpm
+        ports:
+            - '9000:9000'
+
+    
+     
+    webapp:
+      depends_on:
+           - 'php'
+      build:
+         dockerfile: Dockerfile
+         context: .
