@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+
+    db:
+        image: mariadb:latest
+        restart: always
+        environment: 
+            MYSQL_ROOT_PASSWORD: myDatabase
+            MYSQL_DATABaSE: quiz.sql
+
+    adminer:
+        image: adminer
+        restart: always
+        ports:
+            - 8080:8080
+
+    php:
+        depends_on: 
+            -db
+        image: php:7.4-fpm
+        ports:
+            -9000:9000
+
+    nginx:
+        depends_on: 
+            -php
+        image: nginx
+        ports:
+            -8888:8888
