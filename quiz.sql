@@ -12,6 +12,17 @@ CREATE TABLE "quiz" (
     "user_answer" text
 );
 
+CREATE TABLE "user"(
+    "Host" varchar(50) NOT NULL,
+    
+);
+
+-- A.Jones. "Access Denied for User 'root'@'localhost' (using password: YES) - No Privileges?".
+--stackoverflow.com. https://stackoverflow.com/questions/17975120/access-denied-for-user-rootlocalhost-using-password-yes-no-privileges/48056403
+--(accessed Oct 13, 2020).
+INSERT INTO mysql.user (Host, User, Password) VALUES ('%', 'root', password('1234'));
+GRANT ALL ON *.* TO 'root'@'%' WITH GRANT OPTION;
+
 INSERT INTO "quiz" ('id', 'question', 'option A', 'option B', 'option C', 'option D', 'answer') VALUES
 (1, 'How many fish are there at the end of the book?', '7', '5', '9', '12', '9'),
 (2, 'Who was the first fish to get a shiny scale?', 'The little blue fish', 'The purple fish', 'The big fish', 'The green fish', 'The little blue fish'),

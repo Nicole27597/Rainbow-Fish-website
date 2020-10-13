@@ -3,7 +3,8 @@
 <head>
 
   <?php require 'dbconfig.php'
-  session_start(); ?>
+  //session_start(); 
+?>
   <title>Project</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -80,7 +81,7 @@ https://technopoints.co.in/create-simple-quiz-using-php-mysql/ (accessed Oct. 3 
   <form action="" method="post">
   <table><?php if(isset($c)) {
     $fetch_query = "SELECT * FROM 'quiz' WHERE id='$c'";
-    $result=mysqli_query($con,$fetch_query);
+    $result=mysqli_query(trye$con,$fetch_query);
     $num=mysqli_num_rows($result);
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC); }
     ?>
