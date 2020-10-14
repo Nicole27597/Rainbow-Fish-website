@@ -17,7 +17,7 @@ CREATE TABLE "user"(
     
 );
 
--- A.Jones. "Access Denied for User 'root'@'localhost' (using password: YES) - No Privileges?".
+-- A. Jones. "Access Denied for User 'root'@'localhost' (using password: YES) - No Privileges?".
 --stackoverflow.com. https://stackoverflow.com/questions/17975120/access-denied-for-user-rootlocalhost-using-password-yes-no-privileges/48056403
 --(accessed Oct 13, 2020).
 INSERT INTO mysql.user (Host, User, Password) VALUES ('%', 'root', password('1234'));
