@@ -13,8 +13,6 @@ services:
         image: php:7.4-fpm
         ports:
             - '9000:9000'
-
-    
      
     webapp:
       ports:
